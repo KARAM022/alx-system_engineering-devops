@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 # CMNT
 
-for file in *; do
-    # Check if the file is not hidden and contains a dash
+for file in *; 
+do
     if [ ! -d "$file" ] && [[ "$file" == *-* ]]; then
-        # Extract the part of the name after the first dash
         name=$(echo "$file" | cut -d'-' -f2-)
         echo "$name"
     fi
