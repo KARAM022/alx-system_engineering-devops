@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+ssh -i ~/mykey ubuntu@54.237.110.70
