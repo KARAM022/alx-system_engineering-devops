@@ -1,0 +1,5 @@
+# CMNT
+Host 54.237.93.234
+	IdentityFile ~/.ssh/school
+	PasswordAuthentication no
+
