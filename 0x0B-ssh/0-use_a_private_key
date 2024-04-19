@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 # CMNT
+
 ssh -i ~/mykey ubuntu@54.237.110.70
+
