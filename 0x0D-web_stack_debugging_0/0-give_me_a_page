@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# CMNT
+#fix apach service to run on the container
 
 service apache2 start
