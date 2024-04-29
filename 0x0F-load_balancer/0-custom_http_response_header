@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Exit on errors
+set -e
+
+# Update system and install Nginx
+apt-get update -y
+apt-get install -y nginx
+
+# Get the hostname of the server
+SERVER_HOSTNAME=$(hostname)
+
+# Create a backup of the original Nginx configuration
+if [ ! -f /etc/nginx/nginx.conf.bak ]; then
+    cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
+fi
+
+# Add the custom header to the Nginx server block
+# Edit the Nginx configuration to add the custom header
+# Use the hostname as the value for the custom header
+sed -i "/http {/a \    add_header X-Served-By $SERVER_HOSTNAME;" /etc/nginx/nginx.conf
+
+# Restart Nginx to apply changes
+systemctl restart nginx
+
