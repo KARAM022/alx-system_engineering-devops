@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# CMNT
+
+ssh -i ~/.ssh/school ubuntu@18.204.16.150
+
